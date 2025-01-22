@@ -12,3 +12,4 @@ Route::get('/coba', [HaloController::class, 'coba']);
 
 Route::get('/todo', [TodoController::class, 'index'])->name('todo');
 Route::post('/todo', [TodoController::class, 'store'])->name('todo.post');
+Route::put('/todo/{id}', [TodoController::class, 'update'] );
