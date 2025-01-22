@@ -89,6 +89,7 @@ class TodoController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Todo::where('id', $id)->delete();
+        return redirect()->route('todo')->with('success','Berhasil menghapus data!');
     }
 }
