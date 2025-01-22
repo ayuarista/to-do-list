@@ -29,7 +29,12 @@ class TodoController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
+        $request->validate([
+            'task' => 'required|min:3'
+        ], [
+            'task.required' =>'Task wajib diisi',
+            'task.min' =>'Minimal task 3 karakter'
+        ]);
     }
 
     /**
