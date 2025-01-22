@@ -43,7 +43,7 @@ class TodoController extends Controller
         ];
 
         Todo::create($data);
-        return redirect()->route('todo')->with('success','berhasil simpan task!');
+        return redirect()->route('todo')->with('success','Berhasil menyimpan task!');
     }
 
     /**
@@ -81,7 +81,7 @@ class TodoController extends Controller
         ];
 
         Todo::where('id', $id)->update($data);
-        return redirect()->route('todo')->with('success','berhasil memperbarui data!');
+        return redirect()->route('todo')->with('success','Berhasil memperbarui data!');
     }
 
     /**
