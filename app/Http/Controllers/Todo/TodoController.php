@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Todo;
 
 use App\Http\Controllers\Controller;
+use App\Models\Todo;
 use Illuminate\Http\Request;
 
 class TodoController extends Controller
@@ -36,6 +37,12 @@ class TodoController extends Controller
             'task.min' =>'Minimal isian task 3 karakter',
             'task.max' =>'Maximal isian task 50 karakter'
         ]);
+
+        $data = [
+            'task' => $request->input('task')
+        ];
+
+        Todo::create($data);
     }
 
     /**
